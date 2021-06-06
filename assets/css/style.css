@@ -4,18 +4,70 @@
     border: none;
 }
 
+/*Logo Style*/
+#logo{
+    font-family: 'Sigmar One', cursive;
+    font-size: 90px;
+    text-align: center;
+
+}
 
 
 #game-area{
-    height: 600px;
+    background: url(../images/terreno.svg) bottom;
+    
     width: 100%;
-    background-color: aqua;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .moles-area{
     height: 40%;
     width: 100%;
-    position: relative;
+    position: relative;    
     top: 50%;
-    background-color: brown;
+    
+}
+.mole {
+    
+}
+.mole::after{
+    content:"A";
+}
+
+p {
+    
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (max-width: 932px){
+
+    #logo{    
+    font-size: 70px;
+    }
+
+}
+@media screen and (max-width: 767px){
+
+    #logo{    
+    font-size: 50px;
+    }
+    
+    p{
+    font-size: 25px;  
+    }
+}
+@media screen and (max-width: 522px){
+
+    #logo{    
+    font-size: 25px;
+    }
 }
