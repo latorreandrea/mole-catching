@@ -19,23 +19,21 @@
     width: 100%;
     height: 65vh;
     max-height: 450px;
-    max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
-    
+    max-width: 1024px;
     font-family: 'Roboto', sans-serif;
 
 }
-
 .moles-area{
-    height: 40%;
-    width: 100%;
-    position: relative;    
-    top: 50%;
-    
+    position: absolute;
+    bottom: 40%;
+    text-align: center;
 }
-.mole {
-    
+img {
+    width: 25%;
+    height: 25%;
+}
+.mole{
+    display: inline;
 }
 .mole::after{
     content:"A";
