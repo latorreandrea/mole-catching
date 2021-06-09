@@ -11,9 +11,29 @@
     text-align: center;
 
 }
+#loading{
+    
+    background-color: antiquewhite;
+    width: 100%;    
+    padding: 8% 0%;
 
+}
+#horizontal{
+    display: none;
+}
+
+.start{    
+    padding: 10px;
+    margin: 5px 44%;    
+    border: 2px outset;
+    border-radius: 10px;    
+}
+.start:hover{
+    border: 2px inset;
+}
 
 #game-area{
+    display: none;
     background: url(../images/terreno.svg) bottom;
     
     width: 100%;
@@ -22,6 +42,9 @@
     
     font-family: 'Roboto', sans-serif;
 
+}
+.combo{
+    visibility: hidden;
 }
 .moles-area{
     
@@ -34,15 +57,26 @@ img {
 .mole{
     display: inline;
 }
-.mole::after{
+.mole1::after{
     content:"A";
     position: relative;
     left: -13%;
 
 }
+.mole2::after{
+    content:"B";
+    position: relative;
+    left: -13%;
 
-p {
-    
+}
+.mole3::after{
+    content:"C";
+    position: relative;
+    left: -13%;
+
+}
+
+p {    
     text-align: center;
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
@@ -51,10 +85,22 @@ p {
 @media screen and (max-width: 932px){
 
     #logo{    
-    font-size: 50px;
+    font-size: 40px;
     }
 p{
-    font-size: 25px;  
+    font-size: 20px;  
     }
+}
+
+@media screen and (max-width: 500px){
+  #game-area,
+  #loading {
+      display: none;
+  }
+  #horizontal{
+    display: block;
+}
+
+
 }
 
