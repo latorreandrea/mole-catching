@@ -1,13 +1,25 @@
 //create an event listener that start game by pressing button StartGame!
-document.getElementsByClassName("start").addEventListener("click", startGame())
+document.getElementsByClassName("start")[0].addEventListener('click', startGame);
 
 //set a start game function that play initial animation and shows game area
 
-startGame(){
-    
+function startGame(event) {
+    document.getElementById('game-area').style.display = "block";
+    document.getElementById('combo').style.display = "block";
+    document.getElementById('loading').style.display = "none";
 }
 
 //create a function that randomly showing a mole
+let num = Math.floor(Math.random()*3)+1 
+
+if (num == 1){
+        document.getElementsByTagName('img')[0].src = "./assets/images/talpaesce.svg";
+    }else if(num == 2){
+        document.getElementsByTagName('img')[1].src = "./assets/images/talpaesce.svg";
+    }else if(num == 3){
+        document.getElementsByTagName('img')[2].src = "./assets/images/talpaesce.svg";
+    }
+ 
 
 //create a function that confirm we hit the mole
 

@@ -43,8 +43,8 @@
     max-height: 450px;    
     font-family: 'Roboto', sans-serif;
 }
-.combo{
-    visibility: hidden;
+#combo{
+    display: none;
 }
 .moles-area{    
     text-align: center;
@@ -56,18 +56,18 @@ img {
 .mole{
     display: inline;
 }
-.mole1::after{
+#mole1::after{
     content:"A";
     position: relative;
     left: -13%;
 }
-.mole2::after{
-    content:"B";
+#mole2::after{
+    content:"S";
     position: relative;
     left: -13%;
 }
-.mole3::after{
-    content:"C";
+#mole3::after{
+    content:"D";
     position: relative;
     left: -13%;
 }
