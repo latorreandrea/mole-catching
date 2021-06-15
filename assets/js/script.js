@@ -10,18 +10,26 @@ function startGame(event) {
 }
 
 //create a function that randomly showing a mole
-let num = Math.floor(Math.random()*3)+1 
+function showMole() {
+
+let num = Math.floor(Math.random()*3)+1;
+ 
 
 if (num == 1){
-        document.getElementsByTagName('img')[0].src = "./assets/images/talpaesce.svg";
+        document.getElementsByTagName('img')[0].src = "./assets/images/talpaesce.svg";        
     }else if(num == 2){
         document.getElementsByTagName('img')[1].src = "./assets/images/talpaesce.svg";
     }else if(num == 3){
         document.getElementsByTagName('img')[2].src = "./assets/images/talpaesce.svg";
     }
- 
+}
+setInterval(() => {
+    showMole();
+}, 2000)
+// create a function that hide mole after some time
 
 //create a function that confirm we hit the mole
+
 
 //create a function that increase combo
 
