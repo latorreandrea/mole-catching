@@ -1,59 +1,207 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Mole Catching! 
 
-Welcome latorreandrea,
+## Code Institute Portfolio 2 Project
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+Welcome to my first game! 
+Test your skill and try your best to hit more and more moles!
 
-## Gitpod Reminders
+A live website can be found [here](put link here!)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+(/put link for the image)
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+# UX
 
-Another blue button should appear to click: _Open Browser_.
+Before writing any code, I did some user research. On the internet all video game creators recommend, to start, to create basic games such as rock paper, scissors or a mole catcher to understand the principles of programming in games.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+My choice therefore fell on catch the mole and with [vectr](https://vectr.com/) I created the images I use on the site.
 
-A blue button should appear to click: _Make Public_,
+## Strategy
 
-Another blue button should appear to click: _Open Browser_.
+The structure of the game is very basic so to attract the user I point to a good stylistic choice and later to a nice tune to loop during the game
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Project goal: Test my skill in JavaScript
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The main goal for the website is to test current skill with javascript.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
+So i try to find out how to make a site that:
 
-## Updates Since The Instructional Video
+-Has pattern matching functionality 
+-Has limited number of tries before the game is over 
+-Has a score tracking system 
+-Has the ability to play against the computer 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### User Goals:
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+...
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### User Expectations:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+...
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### User Stories:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+...
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Scope and Structure
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+In the present state of my abilities I am limited by my inexperience. This means that il focus all the time to the .jss file.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+The features to include are:
 
----
+-Pattern matching functionality 
+-A limited number of tries before the game is over (the player have 3 attempts)
+-A score tracking system (score are dispalyed during the game)
+-The ability to play against the computer (the game increases in difficulty as the score increases)
 
-Happy coding!
+The structure is therefore really minimal and focused on the game area
+
+## Skeleton
+
+I used [Balsamiq](https://balsamiq.com/) to create wireframes 
+
+## Mobile:
+..
+## Tablet:
+..
+## Desktop:
+..
+You will notice there are some differences to the actual website. For example, the home page no longer consists of a full size background image, instead it takes full width of a column. As you will see in my earlier commits, I did not like how the original idea turned out so I turned back to the drawing board. Which led me to utilise my design skills to create something more fun and unique. 
+
+There are many other differences, but I believe once you try an idea out and it does not work out, there is no harm to change your idea and start thinking of new ways. 
+
+
+
+# Features
+ 
+### Existing Features
+
+
+#### Landing page:
+- Logo 
+
+- Tutorial screen - a quick description tells the user how to play. The game will start when he press the button.
+
+- Rotating screen - if the width of the screen is small the play sreen is hide.
+
+- Play screen -the actual game where real-time score and the number of remaining attempts of the user are recorded when he hit or miss the mole!
+
+
+### Features Left to Implement
+...
+
+#### General maintenance
+- The site was not designed to be modified often.
+In general, the real change will take place on the .css file to recall the holidays eg.
+use reindeer instead of moles at christmas or rabbits at easter
+
+## Technologies Used
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  - used to structure the website and create the essential elements of my site. 
+
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html) 
+  - used to style the markup and create custom styling. 
+
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  - used to help create some interactive elements such as the hamburger icon, modal submit function, read more button and dark mode.
+
+- [Google Developer tools](https://developers.google.com/web/tools/chrome-devtools/) 
+  - to help solve a bug and help style my elements before writing code. 
+
+- [Google Fonts](https://fonts.google.com/) 
+  - used to import the font style and help create a unique brand. 
+
+- [GitHub](https://github.com/) 
+  - used to store the source code and repository. 
+- [GitHub Pages](https://pages.github.com/) 
+  - used to deploy my website.
+
+- [Balsamiq](https://balsamiq.com/) 
+  - used to help create my wireframes.
+
+- [FontAwe](https://fontawesome.com/)
+  - used to use some icons in the site
+
+- [Vectr](https://vectr.com/) 
+  -To create the images  for the game.
+
+# Testing
+
+### Automated Testing 
+
+#### Google Developer Tools 
+
+I used Google Developer tools to help identify any flagged errors. A handy feature is the audit tool, and it alerted me that I had to compress my images even further. 
+
+As well as this, the developer tool also has a responsive feature. It tells you how your site looks across multiple devices, including a 4k screen. This was insightful as I decided to use containers to ensure my site looked good on larger screens. I also made the navbar and footer to stretch across the width of the device. This is to enhance the user experience. 
+
+Also, I found there was an issue with my portfolio and skills section when I viewed my site on mobile. I realised the shadow effect by Bootstrap was causing my section to go beyond the container. I fixed this using media queries ensuring alignment was achieved. 
+
+
+
+#### Responsive Tools
+
+I used [Am I Responsive](http://ami.responsivedesign.is/) to ascertain if my site is responsive on all devices. As I do not carry multiple devices, these are a handy feature to help correct any alignment or issues. 
+
+#### W3C Validator Tools
+
+To help validate my HTML and CSS, I used W3C validator tools to ensure my code was clean. I regularly checked if my code was cleared from any errors after each section was created. 
+
+list of errors:...
+list of solutions:...
+
+
+
+
+### Manual Testing 
+
+put here a list of where the site is put in test...
+
+# Deployment
+
+This project was deployed to GitHub pages. In order to deploy a project onto GitHub, please view the following steps:
+
+1. Log onto GitHub or create an account 
+
+2. Create a repository (repo) on GitHub and name your repo with a project name and give it a description
+
+3. Open your workspace (I use Gitpod)
+
+4. Initialise your repo following the below commands
+`git init`
+- add files to Git (the staging area)
+`git add .`
+- We now want to write a concise commit message
+`git commit -m "git init"`
+
+5. Once your project is complete, you are now ready to deploy this onto GitHub pages.
+
+6. Scoll onto "settings"
+
+7. On the left-hand side, find the "Pages" tab which looks like the following:
+
+8. Now that you are on the Pages section, select "Master Branch" under the Source headings.
+
+9. The page will now automatically refresh. If not, give it 5 minutes. 
+
+10.Your page is now live! You have now successfully deployed your GitHub repository
+
+
+
+
+# Credits
+
+
+I would like to give special thanks to:
+
+- My partner for being supportive for all countless tests done during the creation of the scripts.
+- My brother who pushed me to try again after every mistake
+
+
+Thank you for taking the time to read my project. 
+
+
+
