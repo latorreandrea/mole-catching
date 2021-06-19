@@ -23,13 +23,16 @@ function startGame(event) {
 function showMole() {
     num = Math.floor(Math.random()*3)+1;        
 if (num == 1){
-        showA.src = "./assets/images/talpaesce.svg"; 
+        showA.src = "./assets/images/talpaesce.svg";
+        countPoints(); 
         setTimeout("hideMole()", 1000);               
     }else if(num == 2){
         showS.src = "./assets/images/talpaesce.svg";
+        countPoints();
         setTimeout("hideMole()", 1000);
     }else if(num == 3){
         showD.src = "./assets/images/talpaesce.svg";
+        countPoints();
         setTimeout("hideMole()", 1000);
     }
 }
@@ -59,17 +62,24 @@ function decreseAttempts() {
 }
 
 //create a function that confirm we hit the mole or not
-showA.addEventListener('click', countPoints);
-showS.addEventListener('click', countPoints);
-showD.addEventListener('click', countPoints);
+
 
 function countPoints() {
-    if (showA.src = "./assets/images/talpaesce.svg"){
+    if(num == 1){
         showA.addEventListener('click', increaseScore);
-    }else if(showS.src = "./assets/images/talpaesce.svg"){
-         showS.addEventListener('click', increaseScore);
-    }else if(showD.src = "./assets/images/talpaesce.svg"){
-         showD.addEventListener('click', increaseScore);
-    }     
+        showS.addEventListener('click', decreseAttempts);
+        showD.addEventListener('click', decreseAttempts);
+        return;         
+    }else if(num == 2){         
+        showA.addEventListener('click', decreseAttempts);
+        showS.addEventListener('click', increaseScore);
+        showD.addEventListener('click', decreseAttempts);
+        return;        
+    }else if(num == 3){     
+        showA.addEventListener('click', decreseAttempts);
+        showS.addEventListener('click', decreseAttempts);
+        showD.addEventListener('click', increaseScore);
+        return;
+    } 
 }
 
