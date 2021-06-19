@@ -2,6 +2,8 @@
 
 ## Code Institute Portfolio 2 Project
 
+![Logo](https://user-images.githubusercontent.com/80674568/122635202-ddf5ec80-d0e2-11eb-8307-08a412a39acd.PNG)
+
 Welcome to my first game! 
 Test your skill and try your best to hit more and more moles!
 
@@ -27,10 +29,10 @@ The main goal for the website is to test current skill with javascript.
 
 So i try to find out how to make a site that:
 
--Has pattern matching functionality 
--Has limited number of tries before the game is over 
--Has a score tracking system 
--Has the ability to play against the computer 
+- Has pattern matching functionality 
+- Has limited number of tries before the game is over 
+- Has a score tracking system 
+- Has the ability to play against the computer 
 
 
 #### User Goals:
@@ -51,10 +53,10 @@ In the present state of my abilities I am limited by my inexperience. This means
 
 The features to include are:
 
--Pattern matching functionality 
--A limited number of tries before the game is over (the player have 3 attempts)
--A score tracking system (score are dispalyed during the game)
--The ability to play against the computer (the game increases in difficulty as the score increases)
+- Pattern matching functionality 
+- A limited number of tries before the game is over (the player have 3 attempts)
+- A score tracking system (score are dispalyed during the game)
+- The ability to play against the computer (the game increases in difficulty as the score increases)
 
 The structure is therefore really minimal and focused on the game area
 
@@ -62,32 +64,26 @@ The structure is therefore really minimal and focused on the game area
 
 I used [Balsamiq](https://balsamiq.com/) to create wireframes 
 
+## Desktop & Tablet:
+![desktop](https://user-images.githubusercontent.com/80674568/122635048-deda4e80-d0e1-11eb-9825-88a1c4872699.png)
 ## Mobile:
-..
-## Tablet:
-..
-## Desktop:
-..
-You will notice there are some differences to the actual website. For example, the home page no longer consists of a full size background image, instead it takes full width of a column. As you will see in my earlier commits, I did not like how the original idea turned out so I turned back to the drawing board. Which led me to utilise my design skills to create something more fun and unique. 
-
-There are many other differences, but I believe once you try an idea out and it does not work out, there is no harm to change your idea and start thinking of new ways. 
-
-
+![mobilegame](https://user-images.githubusercontent.com/80674568/122635031-beaa8f80-d0e1-11eb-99c9-03017f685e7d.png)
+![rotate](https://user-images.githubusercontent.com/80674568/122635030-bd796280-d0e1-11eb-8cd0-e08e35392ce6.png)
 
 # Features
  
 ### Existing Features
-
+-You can hit the mole when you do it you will increase combo multiplier and reduce the time that you can hit the mole
 
 #### Landing page:
 - Logo 
-
+![Logo](https://user-images.githubusercontent.com/80674568/122635202-ddf5ec80-d0e2-11eb-8307-08a412a39acd.PNG)
 - Tutorial screen - a quick description tells the user how to play. The game will start when he press the button.
-
+![loading](https://user-images.githubusercontent.com/80674568/122635200-ddf5ec80-d0e2-11eb-9479-19813b858392.PNG)
 - Rotating screen - if the width of the screen is small the play sreen is hide.
-
+![orrizontale](https://user-images.githubusercontent.com/80674568/122635203-de8e8300-d0e2-11eb-8f4a-b0c098bdbeff.PNG)
 - Play screen -the actual game where real-time score and the number of remaining attempts of the user are recorded when he hit or miss the mole!
-
+![gameplayground](https://user-images.githubusercontent.com/80674568/122635199-dd5d5600-d0e2-11eb-81fc-ab065104f840.PNG)
 
 ### Features Left to Implement
 ...
@@ -106,13 +102,13 @@ use reindeer instead of moles at christmas or rabbits at easter
   - used to style the markup and create custom styling. 
 
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-  - used to help create some interactive elements such as the hamburger icon, modal submit function, read more button and dark mode.
+  - used to create the scripts to make the game functional.
 
 - [Google Developer tools](https://developers.google.com/web/tools/chrome-devtools/) 
   - to help solve a bug and help style my elements before writing code. 
 
 - [Google Fonts](https://fonts.google.com/) 
-  - used to import the font style and help create a unique brand. 
+  - used to import the font style. 
 
 - [GitHub](https://github.com/) 
   - used to store the source code and repository. 
@@ -123,7 +119,7 @@ use reindeer instead of moles at christmas or rabbits at easter
   - used to help create my wireframes.
 
 - [FontAwe](https://fontawesome.com/)
-  - used to use some icons in the site
+  - used to use some icons in the site.
 
 - [Vectr](https://vectr.com/) 
   -To create the images  for the game.
@@ -137,9 +133,6 @@ use reindeer instead of moles at christmas or rabbits at easter
 I used Google Developer tools to help identify any flagged errors. A handy feature is the audit tool, and it alerted me that I had to compress my images even further. 
 
 As well as this, the developer tool also has a responsive feature. It tells you how your site looks across multiple devices, including a 4k screen. This was insightful as I decided to use containers to ensure my site looked good on larger screens. I also made the navbar and footer to stretch across the width of the device. This is to enhance the user experience. 
-
-Also, I found there was an issue with my portfolio and skills section when I viewed my site on mobile. I realised the shadow effect by Bootstrap was causing my section to go beyond the container. I fixed this using media queries ensuring alignment was achieved. 
-
 
 
 #### Responsive Tools
@@ -197,8 +190,10 @@ This project was deployed to GitHub pages. In order to deploy a project onto Git
 
 I would like to give special thanks to:
 
+- My mentor Marcel for his patience and be able to order my ideas
 - My partner for being supportive for all countless tests done during the creation of the scripts.
-- My brother who pushed me to try again after every mistake
+- My brother who pushed me to try again after every mistake.
+
 
 
 Thank you for taking the time to read my project. 
