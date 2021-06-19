@@ -34,6 +34,7 @@ if (num == 1){
     }
 }
 
+// create a function that hide mole 
 function hideMole() {
     
     if (num == 1){
@@ -45,12 +46,30 @@ function hideMole() {
     }
 
 }
-// create a function that hide mole after some time
-
-
-//create a function that confirm we hit the mole
-
-
 //create a function that increase combo
+function increaseScore() {
+    let score = document.getElementById('score').innerText;
+    document.getElementById("score").innerText = ++score;
+}
 
-//create a function that decrese the attempts and stop the game if we finish them
+//create a function that decrese the attempts
+function decreseAttempts() {
+    let attempt = document.getElementById('attempt').innerText;
+    document.getElementById('attempt').innerText = --attempt;
+}
+
+//create a function that confirm we hit the mole or not
+showA.addEventListener('click', countPoints);
+showS.addEventListener('click', countPoints);
+showD.addEventListener('click', countPoints);
+
+function countPoints() {
+    if (showA.src = "./assets/images/talpaesce.svg"){
+        showA.addEventListener('click', increaseScore);
+    }else if(showS.src = "./assets/images/talpaesce.svg"){
+         showS.addEventListener('click', increaseScore);
+    }else if(showD.src = "./assets/images/talpaesce.svg"){
+         showD.addEventListener('click', increaseScore);
+    }     
+}
+
