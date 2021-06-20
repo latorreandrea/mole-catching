@@ -12,6 +12,8 @@ function startGame(event) {
     document.getElementById('game-area').style.display = "block";
     document.getElementById('combo').style.display = "block";
     document.getElementById('loading').style.display = "none";
+    document.getElementById("score").innerText = 0;
+    document.getElementById('attempt').innerText = 3;
     setInterval(() => {
     showMole();
 }, 1500)
