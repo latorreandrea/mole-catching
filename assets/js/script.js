@@ -1,25 +1,26 @@
 //create an event listener that start game by pressing button StartGame!
 document.getElementsByClassName("start")[0].addEventListener('click', startGame);
 
-let num = Math.floor(Math.random()*3)+1;            
+let num = 0;            
 let showA = document.getElementsByTagName('img')[0];
 let showS = document.getElementsByTagName('img')[1];
 let showD = document.getElementsByTagName('img')[2];
-
-let timeInterval = null;
-
+let isAlive = false;
+let timeInterval = 1500;
+let timeExpose = 1000;
+let moleTimeOut = null;
 
 //set a start game function that play initial animation and shows game area
 //create a function that stop the game  when attempts are equal to 0 
 function startGame(event) {
+    isAlive = true;
     document.getElementById('game-area').style.display = "block";
     document.getElementById('combo').style.display = "block";
     document.getElementById('loading').style.display = "none";
-    document.getElementById("score").innerText = 0;
+    document.getElementById("score").innerText = 0;    
     document.getElementById('attempt').innerText = 3;
-    timeInteval = setInterval(() => {
-    showMole();
-}, 1500)
+    
+    setTimeout(showMole, (timeInterval - score*2));
 
 }
 
@@ -29,16 +30,14 @@ function showMole() {
     num = Math.floor(Math.random()*3)+1;        
 if (num == 1){
         showA.src = "./assets/images/talpaesce.svg";
-        
-        setTimeout("hideMole()", 1000);               
     }else if(num == 2){
         showS.src = "./assets/images/talpaesce.svg";
-        
-        setTimeout("hideMole()", 1000);
     }else if(num == 3){
         showD.src = "./assets/images/talpaesce.svg";
-        
-        setTimeout("hideMole()", 1000);
+    }
+    setTimeout(hideMole, (timeExpose - score*2));
+    if (isAlive){
+        moleTimeOut = setTimeout(showMole, (timeInterval - score*2));
     }
 }
 
@@ -93,20 +92,19 @@ function countPointsD(){
 // create a game-over function
 
 function gameOver() {
+    isAlive = false;
     alert('MOLES!!! MOLES EVERYWHERE!!!');
     restart();
 }
 
-function restart() {
-    clearInterval(timeInteval);
+function restart() {    
     document.getElementById('game-area').style.display = "none";
     document.getElementById('combo').style.display = "none";
     document.getElementById('loading').style.display = "block";
+    
+    clearTimeout(moleTimeOut);
+    moleTimeOut = null;
+    score = 0;
+    timeInterval = 1500;
+    timeExpose = 1000;
 }
-
-//create a var to set the Interval for showMole and hideMole functions
-
-let showTime = 1500 - score;
-let hideTime = 1400 - score;
-console.log(showTime);
-console.log(hideTime);
