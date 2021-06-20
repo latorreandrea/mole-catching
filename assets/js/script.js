@@ -24,15 +24,15 @@ function showMole() {
     num = Math.floor(Math.random()*3)+1;        
 if (num == 1){
         showA.src = "./assets/images/talpaesce.svg";
-        countPoints(); 
+        
         setTimeout("hideMole()", 1000);               
     }else if(num == 2){
         showS.src = "./assets/images/talpaesce.svg";
-        countPoints();
+        
         setTimeout("hideMole()", 1000);
     }else if(num == 3){
         showD.src = "./assets/images/talpaesce.svg";
-        countPoints();
+        
         setTimeout("hideMole()", 1000);
     }
 }
@@ -63,23 +63,30 @@ function decreseAttempts() {
 
 //create a function that confirm we hit the mole or not
 
+showA.addEventListener('click', countPointsA);
+showS.addEventListener('click', countPointsS);
+showD.addEventListener('click', countPointsD);
 
-function countPoints() {
+function countPointsA(){
     if(num == 1){
-        showA.addEventListener('click', increaseScore);
-        showS.addEventListener('click', decreseAttempts);
-        showD.addEventListener('click', decreseAttempts);
-        return;         
-    }else if(num == 2){         
-        showA.addEventListener('click', decreseAttempts);
-        showS.addEventListener('click', increaseScore);
-        showD.addEventListener('click', decreseAttempts);
-        return;        
-    }else if(num == 3){     
-        showA.addEventListener('click', decreseAttempts);
-        showS.addEventListener('click', decreseAttempts);
-        showD.addEventListener('click', increaseScore);
-        return;
-    } 
+        increaseScore();
+    }else{
+        decreseAttempts();
+    }
 }
 
+function countPointsS(){
+    if(num == 2){
+        increaseScore();
+    }else{
+        decreseAttempts();
+    }
+}
+
+function countPointsD(){
+    if(num == 3){
+        increaseScore();
+    }else{
+        decreseAttempts();
+    }
+}
