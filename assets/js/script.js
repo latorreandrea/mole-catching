@@ -6,6 +6,8 @@ let showA = document.getElementsByTagName('img')[0];
 let showS = document.getElementsByTagName('img')[1];
 let showD = document.getElementsByTagName('img')[2];
 
+
+
 //set a start game function that play initial animation and shows game area
 //create a function that stop the game  when attempts are equal to 0 
 function startGame(event) {
@@ -52,8 +54,10 @@ function hideMole() {
 
 }
 //create a function that increase combo
-function increaseScore() {
-    let score = document.getElementById('score').innerText;
+
+let score = document.getElementById('score').innerText;
+
+function increaseScore() {    
     document.getElementById("score").innerText = ++score;
 }
 
@@ -73,28 +77,17 @@ showS.addEventListener('click', countPointsS);
 showD.addEventListener('click', countPointsD);
 
 function countPointsA(){
-    if(num == 1){
-        increaseScore();
-    }else{
-        decreseAttempts();
-    }
+    (num == 1) ? increaseScore() : decreseAttempts();    
 }
 
 function countPointsS(){
-    if(num == 2){
-        increaseScore();
-    }else{
-        decreseAttempts();
+    (num == 2)? increaseScore() : decreseAttempts();
     }
-}
 
 function countPointsD(){
-    if(num == 3){
-        increaseScore();
-    }else{
-        decreseAttempts();
+    (num == 3) ? increaseScore() : decreseAttempts();
     }
-}
+
 
 // create a game-over function
 
@@ -109,3 +102,10 @@ function restart() {
     document.getElementById('loading').style.display = "block";
 
 }
+
+//create a var to set the Interval for showMole and hideMole functions
+
+let showTime = 1500 - score;
+let hideTime = 1400 - score;
+console.log(showTime);
+console.log(hideTime);

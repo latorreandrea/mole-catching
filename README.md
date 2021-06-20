@@ -34,19 +34,6 @@ So i try to find out how to make a site that:
 - Has a score tracking system 
 - Has the ability to play against the computer 
 
-
-#### User Goals:
-
-...
-
-#### User Expectations:
-
-...
-
-### User Stories:
-
-...
-
 ## Scope and Structure
 
 In the present state of my abilities I am limited by my inexperience. This means that il focus all the time to the .jss file.
@@ -86,7 +73,8 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes
 ![gameplayground](https://user-images.githubusercontent.com/80674568/122635199-dd5d5600-d0e2-11eb-81fc-ab065104f840.PNG)
 
 ### Features Left to Implement
-...
+
+- Add sound: at the moment no piece of music has been inserted which however should play in a loop for the duration of the match
 
 #### General maintenance
 - The site was not designed to be modified often.
@@ -126,7 +114,6 @@ use reindeer instead of moles at christmas or rabbits at easter
 
 # Testing
 
-### Automated Testing 
 
 #### Google Developer Tools 
 
@@ -143,15 +130,25 @@ I used [Am I Responsive](http://ami.responsivedesign.is/) to ascertain if my sit
 
 To help validate my HTML and CSS, I used W3C validator tools to ensure my code was clean. I regularly checked if my code was cleared from any errors after each section was created. 
 
-list of errors:...
-list of solutions:...
+list of errors: 
+- Initial attempts to create a function that recognized if the user clicked on the image of the right mole resulted, except for the first click, to increase the score while decreasing attempts.
 
-
+list of solutions:
+- To get around the problem I have diversified the function that recognizes whether or not we have hit the mole by rewarding or punishing us in a consistent way for each case:
+this is why we have the countPointA function, countPointS and countPointD.
 
 
 ### Manual Testing 
 
-put here a list of where the site is put in test...
+the game was tested on:
+
+- Moto G4
+- Galaxy S5
+- Pixel 2
+- Pixel 2 XL
+- iPhone 5
+- iPad
+- PC
 
 # Deployment
 
