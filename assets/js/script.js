@@ -6,6 +6,7 @@ let showA = document.getElementsByTagName('img')[0];
 let showS = document.getElementsByTagName('img')[1];
 let showD = document.getElementsByTagName('img')[2];
 
+let timeInterval = null;
 
 
 //set a start game function that play initial animation and shows game area
@@ -16,7 +17,7 @@ function startGame(event) {
     document.getElementById('loading').style.display = "none";
     document.getElementById("score").innerText = 0;
     document.getElementById('attempt').innerText = 3;
-    setInterval(() => {
+    timeInteval = setInterval(() => {
     showMole();
 }, 1500)
 
@@ -97,10 +98,10 @@ function gameOver() {
 }
 
 function restart() {
+    clearInterval(timeInteval);
     document.getElementById('game-area').style.display = "none";
     document.getElementById('combo').style.display = "none";
     document.getElementById('loading').style.display = "block";
-
 }
 
 //create a var to set the Interval for showMole and hideMole functions
