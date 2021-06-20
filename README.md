@@ -133,10 +133,11 @@ To help validate my HTML and CSS, I used W3C validator tools to ensure my code w
 list of errors: 
 - Initial attempts to create a function that recognized if the user clicked on the image of the right mole resulted, except for the first click, to increase the score while decreasing attempts.
 - At every restart of the game the showMole interval did not work properly
+
 list of solutions:
 - To get around the problem I have diversified the function that recognizes whether or not we have hit the mole by rewarding or punishing us in a consistent way for each case:
 this is why we have the countPointA function, countPointS and countPointD.
-- To solve it, the clear interval function has been added, which blocks the repetition of showMole at the end of each game
+- To solve it, the clear interval function has been added, which blocks the repetition of showMole at the end of each game and and I created a variable that allows us if we are actually playing or have lost 
 
 
 ### Manual Testing 
