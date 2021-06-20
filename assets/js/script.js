@@ -7,7 +7,7 @@ let showS = document.getElementsByTagName('img')[1];
 let showD = document.getElementsByTagName('img')[2];
 
 //set a start game function that play initial animation and shows game area
-
+//create a function that stop the game  when attempts are equal to 0 
 function startGame(event) {
     document.getElementById('game-area').style.display = "block";
     document.getElementById('combo').style.display = "block";
@@ -59,6 +59,9 @@ function increaseScore() {
 function decreseAttempts() {
     let attempt = document.getElementById('attempt').innerText;
     document.getElementById('attempt').innerText = --attempt;
+    if(document.getElementById('attempt').innerText == '0'){
+        gameOver();
+    }
 }
 
 //create a function that confirm we hit the mole or not
@@ -89,4 +92,18 @@ function countPointsD(){
     }else{
         decreseAttempts();
     }
+}
+
+// create a game-over function
+
+function gameOver() {
+    alert('MOLES!!! MOLES EVERYWHERE!!!');
+    restart();
+}
+
+function restart() {
+    document.getElementById('game-area').style.display = "none";
+    document.getElementById('combo').style.display = "none";
+    document.getElementById('loading').style.display = "block";
+
 }
