@@ -1,5 +1,6 @@
+
 //create an event listener that start game by pressing button StartGame!
-document.getElementsByClassName("start")[0].addEventListener('click', startGame);
+
 
 let num = 0;            
 let showA = document.getElementsByTagName('img')[0];
@@ -9,6 +10,9 @@ let isAlive = false;
 let timeInterval = 1500;
 let timeExpose = 1000;
 let moleTimeOut = null;
+let loadingMusic = document.getElementById("loading-music");
+
+document.getElementsByClassName("start")[0].addEventListener('click', startGame);
 
 //set a start game function that play initial animation and shows game area
 //create a function that stop the game  when attempts are equal to 0 
@@ -19,10 +23,18 @@ function startGame(event) {
     document.getElementById('loading').style.display = "none";
     document.getElementById("score").innerText = 0;    
     document.getElementById('attempt').innerText = 3;
-    
+    pauseAudio();
     setTimeout(showMole, (timeInterval - score*2));
 
 }
+function playAudio() {
+  loadingMusic.play();
+}
+
+function pauseAudio() {
+  loadingMusic.pause();
+}
+
 
 //create a function that randomly showing a mole
 
@@ -53,12 +65,16 @@ function hideMole() {
     }
 
 }
+
+//create a visu
+
 //create a function that increase combo
 
 let score = document.getElementById('score').innerText;
 
 function increaseScore() {    
     document.getElementById("score").innerText = ++score;
+    
 }
 
 //create a function that decrese the attempts
@@ -101,7 +117,7 @@ function restart() {
     document.getElementById('game-area').style.display = "none";
     document.getElementById('combo').style.display = "none";
     document.getElementById('loading').style.display = "block";
-    
+    playAudio();    
     clearTimeout(moleTimeOut);
     moleTimeOut = null;
     score = 0;

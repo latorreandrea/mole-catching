@@ -13,13 +13,15 @@
     <h1 id="logo">Mole Catching! <i class="fas fa-gavel"></i>        
     </h1>
     <div id="loading">
+        <audio id="loading-music" src="./assets/music/Gillicuddy - Pony.mp3" autoplay loop></audio>
         <p>Press the A, S, D keys or tap the moles to hit them.
-           Hitting them will increase your score.
+           Hitting them will increase your score (try to hit them several times).
            They will get faster and faster!
            You have 3 attempts, the game will end with them.
            Beat your high score!
         </p>
         <Button class="start"> Start Game!</Button>
+        
     </div>
     <div id="horizontal">
         <p>
@@ -32,7 +34,7 @@
         <div class="attempts">
             <p>You have <span id="attempt">3</span>/3 attempts</p>
         </div>
-        
+        <audio id="hit-sound" src="./assets/music/hit.wav" muted></audio>
         <div class="moles-area">
             <div class="mole" id="mole1" >
                 <img src="./assets/images/terreno3.svg" alt="">

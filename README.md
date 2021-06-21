@@ -7,10 +7,7 @@
 Welcome to my first game! 
 Test your skill and try your best to hit more and more moles!
 
-A live website can be found [here](put link here!)
-
-(/put link for the image)
-
+A live website can be found [here](https://github.com/latorreandrea/mole-catching.git)
 
 # UX
 
@@ -75,6 +72,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes
 ### Features Left to Implement
 
 - Add sound: at the moment no piece of music has been inserted which however should play in a loop for the duration of the match
+- Add a record section that register the player record
 
 #### General maintenance
 - The site was not designed to be modified often.
@@ -112,7 +110,7 @@ use reindeer instead of moles at christmas or rabbits at easter
 - [Vectr](https://vectr.com/) 
   -To create the images  for the game.
 
-# Testing
+# Testing:
 
 
 #### Google Developer Tools 
