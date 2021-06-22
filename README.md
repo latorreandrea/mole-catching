@@ -7,7 +7,7 @@
 Welcome to my first game! 
 Test your skill and try your best to hit more and more moles!
 
-A live website can be found [here](https://github.com/latorreandrea/mole-catching.git)
+A live website can be found [here](https://latorreandrea.github.io/mole-catching/)
 
 ![immagineschermi](https://user-images.githubusercontent.com/80674568/122830066-1b779700-d2e8-11eb-9c6c-897bce98a961.PNG)
 
