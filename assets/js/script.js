@@ -103,7 +103,16 @@ function countPointsS(){
 function countPointsD(){
     (num == 3) ? increaseScore() : decreseAttempts();
     }
-
+//create a shortcut to use keyboard key to play
+document.addEventListener('keydown', function (event) {
+    if(event.key === 'a'){
+        countPointsA();
+    } else if (event.key === 's'){
+        countPointsS();
+    } else if (event.key === 'd'){
+        countPointsD();
+    }
+})
 
 // create a game-over function
 
