@@ -26,14 +26,21 @@
     background-color: antiquewhite;
     display: none;
 }
+
+/* Game Area*/
 .start{    
     padding: 10px;
-    margin: 5px 44%;    
+    margin: 10px 8%;    
     border: 2px outset;
-    border-radius: 10px;    
+    border-radius: 10px;  
+    
 }
 .start:hover{
     border: 2px inset;
+}
+
+button{
+    display: inline;
 }
 #game-area{
     display: none;
@@ -82,6 +89,33 @@ p {
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
 }
+/*tutorial*/
+.tutorial{
+    display: none;
+}
+
+/*footer*/
+
+footer {
+    background-color: rgb(123, 71, 64);
+    clear: both;
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks>li {
+    display: inline;
+}
+
+.social-networks i {
+    color: #3a3a3a;
+    font-size: large;
+    margin: 0.3em 2.5em;
+    padding: 0.5em;
+}
+
 @media screen and (max-width: 1024px){
     .moles-area {    
     bottom: 20%;

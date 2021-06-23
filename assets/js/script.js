@@ -12,7 +12,7 @@ let timeExpose = 1000;
 let moleTimeOut = null;
 let loadingMusic = document.getElementById("loading-music");
 
-document.getElementsByClassName("start")[0].addEventListener('click', startGame);
+document.getElementsByClassName("start")[1].addEventListener('click', startGame);
 
 //set a start game function that play initial animation and shows game area
 //create a function that stop the game  when attempts are equal to 0 
@@ -34,7 +34,6 @@ function playAudio() {
 function pauseAudio() {
   loadingMusic.pause();
 }
-
 
 //create a function that randomly showing a mole
 
