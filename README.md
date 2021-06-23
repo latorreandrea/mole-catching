@@ -133,6 +133,7 @@ To help validate my HTML and CSS, I used W3C validator tools to ensure my code w
 list of errors: 
 - Initial attempts to create a function that recognized if the user clicked on the image of the right mole resulted, except for the first click, to increase the score while decreasing attempts.
 - At every restart of the game the showMole interval did not work properly
+- The sound music don't play when the game is loading
 
 list of solutions:
 - To get around the problem I have diversified the function that recognizes whether or not we have hit the mole by rewarding or punishing us in a consistent way for each case:
@@ -151,6 +152,11 @@ the game was tested on:
 - iPhone 5
 - iPad
 - PC
+
+*aggiungere cosa accade se premo i tasti
+*timer se funziona
+*footer
+*form
 
 # Deployment
 

@@ -40,7 +40,7 @@ function pauseAudio() {
 
 function showMole() {
     num = Math.floor(Math.random()*3)+1;        
-if (num == 1){
+    if (num == 1){
         showA.src = "./assets/images/talpaesce.svg";
     }else if(num == 2){
         showS.src = "./assets/images/talpaesce.svg";
@@ -65,8 +65,6 @@ function hideMole() {
     }
 
 }
-
-//create a visu
 
 //create a function that increase combo
 
@@ -97,12 +95,13 @@ function countPointsA(){
 }
 
 function countPointsS(){
-    (num == 2)? increaseScore() : decreseAttempts();
-    }
+    (num == 2) ? increaseScore() : decreseAttempts();
+}
 
 function countPointsD(){
     (num == 3) ? increaseScore() : decreseAttempts();
-    }
+}
+
 //create a shortcut to use keyboard key to play
 document.addEventListener('keydown', function (event) {
     if(event.key === 'a'){
@@ -118,8 +117,8 @@ document.addEventListener('keydown', function (event) {
 
 function gameOver() {
     isAlive = false;
-    alert('MOLES!!! MOLES EVERYWHERE!!!');
     restart();
+    //pop up for game over
 }
 
 function restart() {    
