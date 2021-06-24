@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     border: none;
+    
 }
 
 /*Logo Style*/
@@ -27,21 +28,74 @@
     display: none;
 }
 
-/* Game Area*/
-.start{    
-    padding: 10px;
-    margin: 10px 8%;    
-    border: 2px outset;
-    border-radius: 10px;  
-    
-}
-.start:hover{
-    border: 2px inset;
+/*button style*/
+
+:root {
+  --light: #92DE34;
+  --dark: #69BC22;
+  --text: #025600;
 }
 
-button{
-    display: inline;
+body {
+  background-color: var(--background);
+  background-image: linear-gradient(
+    var(--background-accent-2) 50%,
+    var(--background-accent) 50%
+  ), linear-gradient(
+    var(--background-accent) 50%,
+    var(--background-accent-2) 50%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 30px;
+  background-position: top left, bottom left;
+  min-height: 98vh;
 }
+
+button {
+  display: inline;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--light);
+  width: 20rem;
+  height: 4rem;
+  border-radius: 30px;
+  font-size: x-large;
+  font-weight: 600;
+  color: var(--text);
+  background-size: 100% 100%;
+  box-shadow: 0 0 0 7px var(--light) inset;
+  margin: 0 0.5rem
+}
+
+button:hover {
+  background-image: linear-gradient(
+    145deg,
+    transparent 10%,
+    var(--dark) 10% 20%,
+    transparent 20% 30%,
+    var(--dark) 30% 40%,
+    transparent 40% 50%,
+    var(--dark) 50% 60%,
+    transparent 60% 70%,
+    var(--dark) 70% 80%,
+    transparent 80% 90%,
+    var(--dark) 90% 100%
+  );
+  animation: background 3s linear infinite;
+}
+
+@keyframes background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+/* Game Area*/
+
 #game-area{
     display: none;
     background: url(../images/terreno.svg) bottom;    
@@ -92,6 +146,14 @@ p {
 /*tutorial*/
 .tutorial{
     display: none;
+}
+
+.tutorial::before{
+    content: "<i class="fas fa-angle-double-left"></i>";
+}
+
+.tutorial::after{
+    content: "<i class="fas fa-angle-double-right"></i>";
 }
 
 /*footer*/

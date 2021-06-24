@@ -131,3 +131,5 @@ function restart() {
     timeInterval = 1500;
     timeExpose = 1000;
 }
+
+//show how to play function
