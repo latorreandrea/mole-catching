@@ -133,3 +133,10 @@ function restart() {
 }
 
 //show how to play function
+
+document.getElementsByClassName("start")[0].addEventListener('click', tutorial);
+
+function tutorial(event) {
+    document.getElementsByTagName('p')[0].style.display = "none";
+    document.getElementsByClassName('tutorial')[0].style.display = "block";
+    }

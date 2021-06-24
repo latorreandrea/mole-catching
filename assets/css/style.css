@@ -16,6 +16,7 @@
     background-color: antiquewhite;
     width: 100%;    
     padding: 8% 0%;
+    text-align: center;
 }
 .fa-mobile-alt{
     transform:rotate(90deg);
@@ -146,14 +147,8 @@ p {
 /*tutorial*/
 .tutorial{
     display: none;
-}
-
-.tutorial::before{
-    content: "<i class="fas fa-angle-double-left"></i>";
-}
-
-.tutorial::after{
-    content: "<i class="fas fa-angle-double-right"></i>";
+    width: 40%;
+    margin: 0 auto;
 }
 
 /*footer*/
@@ -180,7 +175,7 @@ footer {
 
 @media screen and (max-width: 1024px){
     .moles-area {    
-    bottom: 20%;
+        bottom: 20%;
 }
 
 }
@@ -189,34 +184,39 @@ footer {
 @media screen and (max-width: 932px){
 
     #logo {    
-    font-size: 40px;
+        font-size: 40px;
     }
 
     p{
-    font-size: 20px;  
+        font-size: 20px;  
+    }
+
+    button{
+        width: 11rem;
+        margin: 0 1.08rem;
     }
 }
 
 @media screen and (max-width: 500px){
   #game-area,
   #loading {
-      display: none;
+        display: none;
   }
   #horizontal{
-    display: block;
+        display: block;
   }
 
   #mole1::after{
     
-    font-size: x-large;
+        font-size: x-large;
 }
-#mole2::after{
+  #mole2::after{
     
-    font-size: x-large;
+        font-size: x-large;
 }
-#mole3::after{
+  #mole3::after{
     
-    font-size: x-large;
+        font-size: x-large;
 }
 
 
