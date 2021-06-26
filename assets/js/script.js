@@ -27,6 +27,7 @@ function startGame(event) {
     music.play();
     setTimeout(showMole, (timeInterval - score*10));
 
+
 }
 //music play on start
 
@@ -107,7 +108,8 @@ document.addEventListener('keydown', function (event) {
     }
 })
 
-// create a game-over function
+// create a game-over function and an end of time function
+
 
 function gameOver() {
     isAlive = false;
@@ -138,7 +140,7 @@ document.getElementsByClassName("start")[0].addEventListener('click', tutorial);
 function tutorial(event) {
     document.getElementsByTagName('h2')[0].style.display = "none";
     document.getElementsByClassName('tutorial')[0].style.display = "block";
-    }
+}
 
 
 //rate our game function
