@@ -143,8 +143,40 @@ function tutorial(event) {
 document.getElementsByClassName('start')[2].addEventListener('click',  rateGame)
 
 function rateGame(){
-    document.getElementById('feed-back').style.display = "block";
+    document.getElementById('feed-back').style.display = "flex";
     document.getElementById('game-area').style.display = "none";
     document.getElementById('combo').style.display = "none";
     document.getElementById('loading').style.display = "none";
+}
+
+let star5 = document.getElementById('rate-5');
+let star4 = document.getElementById('rate-4');
+let star3 = document.getElementById('rate-3');
+let star2 = document.getElementById('rate-2');
+let star1 = document.getElementById('rate-1');
+
+star5.addEventListener('click',changeHeader5);
+star4.addEventListener('click',changeHeader4);
+star3.addEventListener('click',changeHeader3);
+star2.addEventListener('click',changeHeader2);
+star1.addEventListener('click',changeHeader1);
+
+function changeHeader5(){
+    document.getElementById('opinion').innerText = "I just love it!";
+}
+
+function changeHeader4(){
+    document.getElementById('opinion').innerText = "I just like it!";
+}
+
+function changeHeader3(){
+    document.getElementById('opinion').innerText = "It is awesome!";
+}
+
+function changeHeader2(){
+    document.getElementById('opinion').innerText = "I don't like it!";
+}
+
+function changeHeader1(){
+    document.getElementById('opinion').innerText = "I just hate it!";
 }

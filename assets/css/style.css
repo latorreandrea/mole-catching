@@ -169,39 +169,70 @@ h2 {
 /*feed-back form*/
 #feed-back{
     display: none;
-    text-align: center;
-    padding: 1rem;
-    background-color: antiquewhite;    
-}
-form{
-    height: 55vh;
+    width: 80%;
+    background: antiquewhite;
+    padding: 20px 30px;
+    margin: 0 auto;
     border: 5px solid #69BC22;
-    border-radius: 30px;
-    
+    border-radius: 50px;    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-#feed-back form input{
+.stars input{
     display: none;
 }
-.stars{
-    margin: 20px 13rem;
-}
+
 .stars label{
-    font-size: xx-large;
-    color: #444444;
+    font-size: x-large;
+    color: gray;
+    padding: 5px;
     float: right;
-    transition: all 0.2s ease;
+    transition: all 0.2 ease;
+
 }
 
 input:not(:checked) ~ label:hover,
 input:not(:checked) ~ label:hover ~ label{
     color: gold;
 }
-input:checked ~ label {
+
+input:checked ~ label{
     color: gold;
 }
 
+input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
 
+form {
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+form header{
+    font-size: x-large;
+    font-weight: bold;
+    margin: 5px 0 20px 0;
+}
+
+form .textarea{
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+}
+
+form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    background: antiquewhite;
+    padding: 5px;
+    font-size: x-large;
+    resize: none;
+}
 /*footer*/
 
 footer {
