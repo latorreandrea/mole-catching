@@ -166,6 +166,42 @@ h2 {
     border: 5px solid #69BC22;
     border-radius: 50px;
 }
+/*feed-back form*/
+#feed-back{
+    display: none;
+    text-align: center;
+    padding: 1rem;
+    background-color: antiquewhite;    
+}
+form{
+    height: 55vh;
+    border: 5px solid #69BC22;
+    border-radius: 30px;
+    
+}
+
+#feed-back form input{
+    display: none;
+}
+.stars{
+    margin: 20px 13rem;
+}
+.stars label{
+    font-size: xx-large;
+    color: #444444;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+    color: gold;
+}
+input:checked ~ label {
+    color: gold;
+}
+
+
 /*footer*/
 
 footer {

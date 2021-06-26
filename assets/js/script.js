@@ -136,3 +136,15 @@ function tutorial(event) {
     document.getElementsByTagName('h2')[0].style.display = "none";
     document.getElementsByClassName('tutorial')[0].style.display = "block";
     }
+
+
+//show rate our game functione
+
+document.getElementsByClassName('start')[2].addEventListener('click',  rateGame)
+
+function rateGame(){
+    document.getElementById('feed-back').style.display = "block";
+    document.getElementById('game-area').style.display = "none";
+    document.getElementById('combo').style.display = "none";
+    document.getElementById('loading').style.display = "none";
+}
