@@ -3,14 +3,13 @@
 
 
 let num = 0;            
-let showA = document.getElementsByTagName('img')[0];
-let showS = document.getElementsByTagName('img')[1];
-let showD = document.getElementsByTagName('img')[2];
+let showA = document.getElementsByTagName('img')[1];
+let showS = document.getElementsByTagName('img')[2];
+let showD = document.getElementsByTagName('img')[3];
 let isAlive = false;
 let timeInterval = 1500;
 let timeExpose = 1000;
 let moleTimeOut = null;
-let loadingMusic = document.getElementById("loading-music");
 
 document.getElementsByClassName("start")[1].addEventListener('click', startGame);
 
@@ -23,17 +22,11 @@ function startGame(event) {
     document.getElementById('loading').style.display = "none";
     document.getElementById("score").innerText = 0;    
     document.getElementById('attempt').innerText = 3;
-    pauseAudio();
+    
     setTimeout(showMole, (timeInterval - score*2));
 
 }
-function playAudio() {
-  loadingMusic.play();
-}
 
-function pauseAudio() {
-  loadingMusic.pause();
-}
 
 //create a function that randomly showing a mole
 
@@ -124,7 +117,7 @@ function restart() {
     document.getElementById('game-area').style.display = "none";
     document.getElementById('combo').style.display = "none";
     document.getElementById('loading').style.display = "block";
-    playAudio();    
+    document.getElementsByClassName('tutorial')[0].style.display = "none";
     clearTimeout(moleTimeOut);
     moleTimeOut = null;
     score = 0;
@@ -137,6 +130,6 @@ function restart() {
 document.getElementsByClassName("start")[0].addEventListener('click', tutorial);
 
 function tutorial(event) {
-    document.getElementsByTagName('p')[0].style.display = "none";
+    document.getElementsByTagName('h2')[0].style.display = "none";
     document.getElementsByClassName('tutorial')[0].style.display = "block";
     }

@@ -15,7 +15,7 @@
 #loading{    
     background-color: antiquewhite;
     width: 100%;    
-    padding: 8% 0%;
+    padding-bottom: 1rem;
     text-align: center;
 }
 .fa-mobile-alt{
@@ -124,19 +124,19 @@ img {
 #mole1::after{
     content:"A";
     position: relative;
-    left: -13%;
+    left: -14%;
     font-size: xx-large;
 }
 #mole2::after{
     content:"S";
     position: relative;
-    left: -13%;
+    left: -14%;
     font-size: xx-large;
 }
 #mole3::after{
     content:"D";
     position: relative;
-    left: -13%;
+    left: -14%;
     font-size: xx-large;
 }
 p {    
@@ -147,8 +147,15 @@ p {
 /*tutorial*/
 .tutorial{
     display: none;
-    width: 40%;
+    width: 46%;
     margin: 0 auto;
+}
+
+/*start and game over style*/
+h2 {
+    font-family: 'Sigmar One', cursive;
+    font-size: x-large;
+    text-align: center;
 }
 
 /*footer*/
