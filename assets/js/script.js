@@ -23,7 +23,7 @@ function startGame(event) {
     document.getElementById("score").innerText = 0;    
     document.getElementById('attempt').innerText = 3;
     
-    setTimeout(showMole, (timeInterval - score*2));
+    setTimeout(showMole, (timeInterval - score*10));
 
 }
 
@@ -39,9 +39,9 @@ function showMole() {
     }else if(num == 3){
         showD.src = "./assets/images/talpaesce.svg";
     }
-    setTimeout(hideMole, (timeExpose - score*2));
+    setTimeout(hideMole, (timeExpose - score*10));
     if (isAlive){
-        moleTimeOut = setTimeout(showMole, (timeInterval - score*2));
+        moleTimeOut = setTimeout(showMole, (timeInterval - score*10));
     }
 }
 
