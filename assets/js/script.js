@@ -109,8 +109,9 @@ document.addEventListener('keydown', function (event) {
 
 function gameOver() {
     isAlive = false;
-    restart();
-    //pop up for game over
+    document.getElementById('game-area').style.display = "none";
+    document.getElementById('game-over').style.display = "block";
+    document.getElementsByTagName("button")[3].addEventListener('click', restart);
 }
 
 function restart() {    
@@ -118,6 +119,8 @@ function restart() {
     document.getElementById('combo').style.display = "none";
     document.getElementById('loading').style.display = "block";
     document.getElementsByClassName('tutorial')[0].style.display = "none";
+    document.getElementById('game-over').style.display = "none";
+    document.getElementsByTagName('h2')[0].style.display = "block";
     clearTimeout(moleTimeOut);
     moleTimeOut = null;
     score = 0;
