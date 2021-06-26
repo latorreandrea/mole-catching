@@ -113,7 +113,7 @@ use reindeer instead of moles at christmas or rabbits at easter
   - To create the images  for the game.
 
 - [Musicgamerx-8-bitDream](https://archive.org/details/Musicgamerx-8-bitDream/8-bit5-Shine.mp3)
-  - For the music.
+  - For the music during the game.
 
 - [Canva](https://www.canva.com/)
   - For the tutorial gif.

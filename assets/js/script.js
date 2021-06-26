@@ -1,6 +1,4 @@
-
 //create an event listener that start game by pressing button StartGame!
-
 
 let num = 0;            
 let showA = document.getElementsByTagName('img')[1];
@@ -13,10 +11,8 @@ let moleTimeOut = null;
 let music = document.getElementById("music");
 document.getElementsByClassName("start")[1].addEventListener('click', startGame);
 
-
-
 //set a start game function that play initial animation and shows game area
-//create a function that stop the game  when attempts are equal to 0 
+ 
 function startGame(event) {
     isAlive = true;
     document.getElementById('game-area').style.display = "block";
@@ -26,10 +22,8 @@ function startGame(event) {
     document.getElementById('attempt').innerText = 3;    
     music.play();
     setTimeout(showMole, (timeInterval - score*10));
-
-
 }
-//music play on start
+
 
 //create a function that randomly showing a mole
 
@@ -109,7 +103,6 @@ document.addEventListener('keydown', function (event) {
 })
 
 // create a game-over function and an end of time function
-
 
 function gameOver() {
     isAlive = false;
