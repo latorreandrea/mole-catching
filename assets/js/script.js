@@ -10,8 +10,10 @@ let isAlive = false;
 let timeInterval = 1500;
 let timeExpose = 1000;
 let moleTimeOut = null;
-
+let music = document.getElementById("music");
 document.getElementsByClassName("start")[1].addEventListener('click', startGame);
+
+
 
 //set a start game function that play initial animation and shows game area
 //create a function that stop the game  when attempts are equal to 0 
@@ -21,12 +23,12 @@ function startGame(event) {
     document.getElementById('combo').style.display = "block";
     document.getElementById('loading').style.display = "none";
     document.getElementById("score").innerText = 0;    
-    document.getElementById('attempt').innerText = 3;
-    
+    document.getElementById('attempt').innerText = 3;    
+    music.play();
     setTimeout(showMole, (timeInterval - score*10));
 
 }
-
+//music play on start
 
 //create a function that randomly showing a mole
 
@@ -112,6 +114,7 @@ function gameOver() {
     document.getElementById('game-area').style.display = "none";
     document.getElementById('game-over').style.display = "block";
     document.getElementsByTagName("button")[3].addEventListener('click', restart);
+    music.pause();
 }
 
 function restart() {    
@@ -120,7 +123,7 @@ function restart() {
     document.getElementById('loading').style.display = "block";
     document.getElementsByClassName('tutorial')[0].style.display = "none";
     document.getElementById('game-over').style.display = "none";
-    document.getElementsByTagName('h2')[0].style.display = "block";
+    document.getElementsByTagName('h2')[0].style.display = "block";    
     clearTimeout(moleTimeOut);
     moleTimeOut = null;
     score = 0;
@@ -138,7 +141,7 @@ function tutorial(event) {
     }
 
 
-//show rate our game functione
+//rate our game function
 
 document.getElementsByClassName('start')[2].addEventListener('click',  rateGame)
 
