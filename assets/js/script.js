@@ -10,8 +10,7 @@ let timeExpose = 1000;
 let moleTimeOut = null;
 let music = document.getElementById("music");
 document.getElementsByClassName("start")[1].addEventListener('click', startGame);
-document.getElementsByClassName("start")[1].addEventListener('click', countDown);
-
+let time = null;
 //set a start game function that shows game area
  
 function startGame(event) {
@@ -19,10 +18,12 @@ function startGame(event) {
     document.getElementById('game-area').style.display = "block";
     document.getElementById('combo').style.display = "block";
     document.getElementById('loading').style.display = "none";
-    document.getElementById("score").innerText = 0;    
-    document.getElementById('attempt').innerText = 3;    
-    music.play();
+    document.getElementById('score').innerText = 0;    
+    document.getElementById('attempt').innerText = 3;
+    document.getElementById('time-left').innerText = 120;
+    music.play();    
     setTimeout(showMole, (timeInterval - score*10));
+    time = setInterval(countDown, 1000);
 }
 
 
@@ -94,12 +95,14 @@ function countPointsD(){
 
 //create a shortcut to use keyboard key to play
 document.addEventListener('keydown', function (event) {
-    if(event.key === 'a'){
-        countPointsA();
-    } else if (event.key === 's'){
-        countPointsS();
-    } else if (event.key === 'd'){
-        countPointsD();
+    if(isAlive){
+        if(event.key === 'a'){
+            countPointsA();
+        } else if (event.key === 's'){
+            countPointsS();
+        } else if (event.key === 'd'){
+            countPointsD();
+        }
     }
 })
 
@@ -111,6 +114,7 @@ function gameOver() {
     document.getElementById('game-over').style.display = "block";
     document.getElementsByTagName("button")[3].addEventListener('click', restart);
     music.pause();
+    clearInterval(time);
 }
 
 function restart() {    
@@ -121,10 +125,12 @@ function restart() {
     document.getElementById('game-over').style.display = "none";
     document.getElementsByTagName('h2')[0].style.display = "block";    
     clearTimeout(moleTimeOut);
-    moleTimeOut = null;
+    moleTimeOut = null;    
     score = 0;
     timeInterval = 1500;
     timeExpose = 1000;
+    timeLeft = 120;
+    
 }
 
 //show how to play function
@@ -183,12 +189,10 @@ function changeHeader1(){
 //create a count down to the game over
 let timeLeft = document.getElementById('time-left').innerText;
 
-function countDown() {
-    setInterval(function(){
-        if (timeLeft == '0'){
-            clearInterval(countDown);
-            gameOver();
-        }
-        document.getElementById('time-left').innerText = --timeLeft
-    }, 1000)
-}
+function countDown(){
+    if (timeLeft == "0"){
+        gameOver();
+    }else{
+        document.getElementById('time-left').innerText = --timeLeft;
+    }    
+}    
