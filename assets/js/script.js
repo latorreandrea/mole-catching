@@ -10,8 +10,9 @@ let timeExpose = 1000;
 let moleTimeOut = null;
 let music = document.getElementById("music");
 document.getElementsByClassName("start")[1].addEventListener('click', startGame);
+document.getElementsByClassName("start")[1].addEventListener('click', countDown);
 
-//set a start game function that play initial animation and shows game area
+//set a start game function that shows game area
  
 function startGame(event) {
     isAlive = true;
@@ -102,7 +103,7 @@ document.addEventListener('keydown', function (event) {
     }
 })
 
-// create a game-over function and an end of time function
+// create a game-over function 
 
 function gameOver() {
     isAlive = false;
@@ -177,4 +178,17 @@ function changeHeader2(){
 
 function changeHeader1(){
     document.getElementById('opinion').innerText = "I just hate it!";
+}
+
+//create a count down to the game over
+let timeLeft = document.getElementById('time-left').innerText;
+
+function countDown() {
+    setInterval(function(){
+        if (timeLeft == '0'){
+            clearInterval(countDown);
+            gameOver();
+        }
+        document.getElementById('time-left').innerText = --timeLeft
+    }, 1000)
 }
