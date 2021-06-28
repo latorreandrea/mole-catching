@@ -159,10 +159,16 @@ the game was tested on:
 - iPad
 - PC
 
-*aggiungere cosa accade se premo i tasti
-*timer se funziona
-*footer
-*form
+At the first start of the game the music did not start so I associated the start of the music with pressing the start button. In this way the tune starts for the duration of the game and ends with the game over.
+
+Of primary importance was verifying the correct functioning of the function that gave the score or that takes away attempts depending on the moment in which the user click on the images where the moles are positioned.
+
+For how set the function that gives the spikes if the loaded image is that of the mole out of the hole the application is able to understand it but it did not stop with the game over screen. This made it even more necessary to use a variable (isAlive) which if true activates the key listeners when this variable is set to false the key listeners are disabled (we refer to the a, s, d keys).
+
+After a first use through a set interval the timer created encountered a problem that is it did not reactivate when the game was restarted.
+This necessitated its declaration (timer = null) as a global variable so that all functions could call it even if with a different value.
+
+At the moment the footer and voting form are only aesthetic and are not yet connected to a real server or brand so the form leads to an application error while the footer is connected to the general social pages.
 
 # Deployment
 
