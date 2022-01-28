@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,27 @@
 
     <title>Mole Catching!</title>
 </head>
+
 <body>
-    <h1 id="logo">Mole Catching! <i class="fas fa-gavel"></i>        
+    <h1 id="logo">Mole Catching! <i class="fas fa-gavel"></i>
     </h1>
     <audio id="music" src="./assets/music/8-bit-HappyDay.ogg" loop></audio>
     <div id="loading">
-        
+
         <h2>
             Test your skill and try your best to hit more and more moles!
         </h2>
         <img src="./assets/images/tutorial.gif" class="tutorial" alt="tutorial">
-        
+
 
         <Button class="start"> How to play</Button>
         <Button class="start"> Start Game!</Button>
         <Button class="start"> Rate our game</Button>
-        
+
     </div>
     <div id="horizontal">
         <p>
-            Turn your device orizontal to play the game
+            Turn your device horizontal to play the game
             <br>
             <i class="fas fa-mobile-alt"></i>
         </p>
@@ -37,9 +39,9 @@
         <div class="attempts">
             <p>You have <span id="attempt">3</span>/3 attempts</p>
         </div>
-        
+
         <div class="moles-area">
-            <div class="mole" id="mole1" >
+            <div class="mole" id="mole1">
                 <img src="./assets/images/terreno3.svg" alt="">
 
             </div>
@@ -64,9 +66,9 @@
         <p>X <span id="score">0</span></p>
         <p>Time left: <span id="time-left">120</span>sec</p>
     </div>
-    <div id="feed-back">       
-        
-            <div class="stars"> 
+    <div id="feed-back">
+
+        <div class="stars">
             <input type="radio" name="rate" id="rate-5">
             <label for="rate-5" class="fas fa-star"></label>
             <input type="radio" name="rate" id="rate-4">
@@ -77,20 +79,20 @@
             <label for="rate-2" class="fas fa-star"></label>
             <input type="radio" name="rate" id="rate-1">
             <label for="rate-1" class="fas fa-star"></label>
-            </div>
-            
-            <form action="#" method="POST">
-                <header id="opinion">I don't like it</header>
-                <div class="textarea">
-                    <textarea cols="30" placeholder="write here your suggestion to improve us"></textarea>
-                </div>
-                <button type="submit">Send!</button>
-            </form>
-           
-        
+        </div>
 
-    </div>    
-    
+        <form action="#" method="POST">
+            <header id="opinion">I don't like it</header>
+            <div class="textarea">
+                <textarea cols="30" placeholder="write here your suggestion to improve us"></textarea>
+            </div>
+            <button type="submit">Send!</button>
+        </form>
+
+
+
+    </div>
+
     <footer>
         <ul class="social-networks">
             <li>
@@ -116,6 +118,7 @@
     <!--font awersome script-->
     <script src="https://kit.fontawesome.com/1212bb9a28.js" crossorigin="anonymous"></script>
 
-    <script src="assets/js/script.js"></script>    
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
